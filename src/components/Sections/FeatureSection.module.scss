@@ -2,7 +2,9 @@
 @import "../../helper/mixin.scss";
 
 .featureContainer {
-  height: 90vh;
+  // height: 90vh;
+  width: 100%;
+  padding: 3rem 0;
   background-color: $color-whiteShade-1;
 
   display: flex;
@@ -14,18 +16,46 @@
     url("../../img/header5.jpg");
   background-position: center;
   background-size: cover;
+
+  @include respond(phone-2) {
+    padding: 2rem;
+  }
 }
 
 .cardList {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
-.featureHeading{
+.featureHeading {
   text-transform: uppercase;
-  font-size: 5rem;
+  font-size: 3.7rem;
   margin-bottom: 3rem;
   letter-spacing: 0.8rem;
   word-spacing: 1rem;
+
+
+  @include respond(tab-phone-2) {
+    font-size: 3.5rem;
+    letter-spacing: 0.5rem;
+    word-spacing: 0.8rem;
+  }
+  @include respond(phone-1) {
+    font-size: 3rem;
+    letter-spacing: 0.4rem;
+    word-spacing: 0.7rem;
+  }
+  @include respond(phone-2) {
+    font-size: 2.5rem;
+    letter-spacing: 0.3rem;
+    word-spacing: 0.6rem;
+  }
+  @include respond(phone-3) {
+    font-size: 1.6rem;
+    letter-spacing: 0.2rem;
+    word-spacing: 0.5rem;
+  }
 }
