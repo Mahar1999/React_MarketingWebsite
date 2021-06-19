@@ -1,10 +1,31 @@
 @import "../../helper/colors.scss";
+@import "../../helper/mixin.scss";
 
 .featureContainer {
-  height: 80vh;
+  height: 90vh;
   background-color: $color-whiteShade-1;
 
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+
+  background-image: linear-gradient(to right bottom, #eeeeeecc, #ebebeb),
+    url("../../img/header5.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.cardList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.featureHeading{
+  text-transform: uppercase;
+  font-size: 5rem;
+  margin-bottom: 3rem;
+  letter-spacing: 0.8rem;
+  word-spacing: 1rem;
 }

@@ -5,15 +5,17 @@ import classes from "./Card.module.scss";
 
 const Card = (props) => {
   return (
-    <div className={classes.cardContainer}>
-      <div className={classes.cardIconConatiner}>
-        <IoBarbellOutline className={classes.cardIcon} />
-      </div>
-      <div className={classes.cardContentContainer}>
-        <p className={classes.cardContentContainer__heading}>{props.title}</p>
-        <p className={classes.cardContentContainer__para}>
-          {props.description}
-        </p>
+    <div className={classes.cardContainerBorder}>
+      <div className={classes.cardContainer}>
+        <div className={classes.cardIconConatiner}>
+          <IoBarbellOutline className={classes.cardIcon} />
+        </div>
+        <div className={classes.cardContentContainer}>
+          <p className={classes.cardContentContainer__heading}>{props.title}</p>
+          <p className={classes.cardContentContainer__para}>
+            {props.description}
+          </p>
+        </div>
       </div>
     </div>
   );
