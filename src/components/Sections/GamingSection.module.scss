@@ -10,6 +10,9 @@
     height: 90vh;
   }
   @include respond(tab-port) {
+    height: 75vh;
+  }
+  @include respond(tab-phone-2) {
     height: 70vh;
   }
   @include respond(phone-1) {
@@ -21,24 +24,14 @@
 }
 
 .photo {
-  width: 50%;
+  width: 45%;
   position: absolute;
-  // display: flex;
-  // align-items: center;
-  // justify-content: center;
-
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  @include respond(tab-land) {
-    width: 40%;
-  }
-  @include respond(tab-port) {
-    width: 30%;
-  }
+
   @include respond(phone-1) {
-    width: 40%;
-    top: 40%;
+    width: 45%;
   }
   @include respond(phone-2) {
     width: 0;
@@ -54,11 +47,12 @@
     border: 1rem solid white;
     border-right: 0;
     z-index: -1;
+
     @include respond(tab-land) {
       border: 0.7rem solid white;
       border-right: 0;
     }
-    @include respond(phone-1) {
+    @include respond(tab-phone-1) {
       border: none;
     }
   }
@@ -72,11 +66,12 @@
     border: 1rem solid black;
     border-left: 0;
     z-index: -1;
+
     @include respond(tab-land) {
       border: 0.7rem solid black;
       border-left: 0;
     }
-    @include respond(phone-1) {
+    @include respond(tab-phone-1) {
       border: none;
     }
   }
@@ -89,6 +84,43 @@
   }
 }
 
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 0 1rem;
+
+  @include respond(phone-2) {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+/*********************** Left Box ***********************/
+.LeftContentPlacementLeft {
+  width: 50%;
+  text-align: center;
+
+  @include respond(phone-1) {
+    width: 60%;
+  }
+  @include respond(phone-2) {
+    width: 100%;
+  }
+}
+.LeftContentPlacementRight {
+  width: 50%;
+
+  @include respond(phone-1) {
+    width: 40%;
+  }
+  @include respond(phone-2) {
+    width: 0%;
+  }
+}
+
 .leftBox {
   background-image: linear-gradient(
       to right bottom,
@@ -98,27 +130,27 @@
     url("../../img/GamingLeft.png");
   background-size: cover;
   background-position: center;
-  // flex: 1;
   width: 50%;
-
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
 
   p {
     color: $color-0;
-    margin-left: 2rem;
   }
 
   &__heading {
-    font-size: 7rem;
+    font-size: 6rem;
     font-weight: 500;
+
     @include respond(tab-land) {
       font-size: 5rem;
     }
-    @include respond(tab-port) {
+    @include respond(tab-phone-1) {
       font-size: 4rem;
+    }
+    @include respond(tab-phone-2) {
+      font-size: 3rem;
     }
     @include respond(phone-2) {
       font-size: 3rem;
@@ -133,42 +165,71 @@
     font-size: 2rem;
     font-weight: 300;
     line-height: 3rem;
+
     @include respond(tab-land) {
       font-size: 1.8rem;
     }
-    @include respond(phone-2) {
-      font-size: 1.5rem;
+    @include respond(tab-phone-2) {
+      font-size: 1.6rem;
+    }
+    @include respond(phone-1) {
       line-height: 2rem;
     }
-      @include respond(phone-3) {
-      margin-left: 0.8rem;
+    @include respond(phone-2) {
+      line-height: 2.5rem;
     }
+    @include respond(phone-3) {
+      font-size: 1.3rem;
+    }
+  }
+}
+
+/*********************** Right Box ***********************/
+.RightContentPlacementLeft {
+  width: 50%;
+
+  @include respond(phone-1) {
+    width: 40%;
+  }
+  @include respond(phone-2) {
+    width: 0%;
+  }
+}
+
+.RightContentPlacementRight {
+  width: 50%;
+  text-align: center;
+
+  @include respond(phone-1) {
+    width: 60%;
+  }
+  @include respond(phone-2) {
+    width: 100%;
   }
 }
 
 .rightBox {
-  // flex: 1;
   width: 50%;
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
-  @include respond(tab-land) {
-    align-items: flex-end;
-    justify-content: center;
-  }
+
   P {
     color: $color-1;
-    margin-right: 2rem;
   }
+
   &__heading {
     font-size: 7rem;
     font-weight: 500;
+
     @include respond(tab-land) {
       font-size: 5rem;
     }
-    @include respond(tab-port) {
+    @include respond(tab-phone-1) {
       font-size: 4rem;
+    }
+    @include respond(tab-phone-2) {
+      font-size: 3rem;
     }
     @include respond(phone-2) {
       font-size: 3rem;
@@ -177,28 +238,27 @@
       font-size: 2.5rem;
     }
   }
+
   &__para {
     margin-top: 3rem;
     font-size: 2rem;
     font-weight: 300;
     line-height: 3rem;
-   
+
     @include respond(tab-land) {
       font-size: 1.8rem;
     }
-    @include respond(phone-2) {
-      font-size: 1.5rem;
+    @include respond(tab-phone-2) {
+      font-size: 1.6rem;
+    }
+    @include respond(phone-1) {
       line-height: 2rem;
     }
+    @include respond(phone-2) {
+      line-height: 2.5rem;
+    }
     @include respond(phone-3) {
-      margin-left: 0.8rem;
+      font-size: 1.3rem;
     }
   }
-}
-
-.box {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
 }

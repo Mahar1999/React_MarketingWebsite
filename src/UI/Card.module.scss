@@ -16,6 +16,9 @@
 
 .cardIconConatiner {
   text-align: center;
+  border: 0.5rem solid $color-0;
+  padding: 0.1rem;
+  border-radius: 50%;
 }
 
 .cardIcon {
@@ -25,13 +28,6 @@
   border-radius: 50%;
   padding: 0.5rem;
   margin: 1rem;
-}
-
-.cardIcon ::after {
-  content: " ";
-  border: 1rem solid red;
-  height: 100%;
-  width: 100%;
 }
 
 .cardContentContainer {
@@ -60,6 +56,5 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    ///////////////
   }
 }

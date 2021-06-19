@@ -1,44 +1,63 @@
 @mixin respond($breakpoint) {
-    @if $breakpoint == phone-4 {
-      // 300px
-      @media (max-width: 18.75em) {
-        @content;
-      }
-    }
-    @if $breakpoint == phone-3 {
-      // 400px
-      @media (max-width: 25em) {
-        @content;
-      }
-    }
-    @if $breakpoint == phone-2{
-      // 500px
-      @media (max-width: 31.25em) {
-        @content;
-      }
-    }
-    @if $breakpoint == phone-1 {
-      // 600px
-      @media (max-width: 37.5em) {
-        @content;
-      }
-    }
-    @if $breakpoint == tab-port {
-      @media (max-width: 56.25em) {
-        // 900px
-        @content;
-      }
-    }
-    @if $breakpoint == tab-land {
-      @media (max-width: 75em) {
-        // 1200px
-        @content;
-      }
-    }
-    @if $breakpoint == big-desktop {
-      @media (min-width: 87.5em) {
-        @content;
-      } //1400px
+  @if $breakpoint == phone-4 {
+    // 300px
+    @media (max-width: 18.75em) {
+      @content;
     }
   }
-  
+
+  @if $breakpoint == phone-3 {
+    // 400px
+    @media (max-width: 25em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == phone-2 {
+    // 500px
+    @media (max-width: 31.25em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == phone-1 {
+    // 600px
+    @media (max-width: 37.5em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-phone-2 {
+    // 700px
+    @media (max-width: 43.75em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-phone-1 {
+    // 800px
+    @media (max-width: 50em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-port {
+    @media (max-width: 56.25em) {
+      // 900px
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-land {
+    @media (max-width: 75em) {
+      // 1200px
+      @content;
+    }
+  }
+
+  @if $breakpoint == big-desktop {
+    @media (min-width: 87.5em) {
+      @content;
+    } //1400px
+  }
+}
