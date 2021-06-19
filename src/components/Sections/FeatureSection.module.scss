@@ -1,0 +1,10 @@
+@import "../../helper/colors.scss";
+
+.featureContainer {
+  height: 80vh;
+  background-color: $color-whiteShade-1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

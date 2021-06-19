@@ -1,0 +1,204 @@
+@import "../../helper/colors.scss";
+@import "../../helper/mixin";
+
+.container {
+  height: 100vh;
+  display: flex;
+  position: relative;
+
+  @include respond(tab-land) {
+    height: 90vh;
+  }
+  @include respond(tab-port) {
+    height: 70vh;
+  }
+  @include respond(phone-1) {
+    height: 60vh;
+  }
+  @include respond(phone-2) {
+    height: 50vh;
+  }
+}
+
+.photo {
+  width: 50%;
+  position: absolute;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @include respond(tab-land) {
+    width: 40%;
+  }
+  @include respond(tab-port) {
+    width: 30%;
+  }
+  @include respond(phone-1) {
+    width: 40%;
+    top: 40%;
+  }
+  @include respond(phone-2) {
+    width: 0;
+  }
+
+  &::before {
+    content: "";
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: 1rem solid white;
+    border-right: 0;
+    z-index: -1;
+    @include respond(tab-land) {
+      border: 0.7rem solid white;
+      border-right: 0;
+    }
+    @include respond(phone-1) {
+      border: none;
+    }
+  }
+  &::after {
+    content: "";
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: 1rem solid black;
+    border-left: 0;
+    z-index: -1;
+    @include respond(tab-land) {
+      border: 0.7rem solid black;
+      border-left: 0;
+    }
+    @include respond(phone-1) {
+      border: none;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+
+    text-align: center;
+  }
+}
+
+.leftBox {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(7, 7, 7, 0.8),
+      rgba(0, 0, 0, 0.103)
+    ),
+    url("../../img/GamingLeft.png");
+  background-size: cover;
+  background-position: center;
+  // flex: 1;
+  width: 50%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  p {
+    color: $color-0;
+    margin-left: 2rem;
+  }
+
+  &__heading {
+    font-size: 7rem;
+    font-weight: 500;
+    @include respond(tab-land) {
+      font-size: 5rem;
+    }
+    @include respond(tab-port) {
+      font-size: 4rem;
+    }
+    @include respond(phone-2) {
+      font-size: 3rem;
+    }
+    @include respond(phone-3) {
+      font-size: 2.5rem;
+    }
+  }
+
+  &__para {
+    margin-top: 3rem;
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 3rem;
+    @include respond(tab-land) {
+      font-size: 1.8rem;
+    }
+    @include respond(phone-2) {
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+      @include respond(phone-3) {
+      margin-left: 0.8rem;
+    }
+  }
+}
+
+.rightBox {
+  // flex: 1;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  @include respond(tab-land) {
+    align-items: flex-end;
+    justify-content: center;
+  }
+  P {
+    color: $color-1;
+    margin-right: 2rem;
+  }
+  &__heading {
+    font-size: 7rem;
+    font-weight: 500;
+    @include respond(tab-land) {
+      font-size: 5rem;
+    }
+    @include respond(tab-port) {
+      font-size: 4rem;
+    }
+    @include respond(phone-2) {
+      font-size: 3rem;
+    }
+    @include respond(phone-3) {
+      font-size: 2.5rem;
+    }
+  }
+  &__para {
+    margin-top: 3rem;
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 3rem;
+   
+    @include respond(tab-land) {
+      font-size: 1.8rem;
+    }
+    @include respond(phone-2) {
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+    @include respond(phone-3) {
+      margin-left: 0.8rem;
+    }
+  }
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}

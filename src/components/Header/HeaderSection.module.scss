@@ -1,0 +1,13 @@
+@import "../../helper/colors";
+
+.container {
+  background-color: $color-1;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(14, 14, 14, 0.596),
+      rgba(48, 47, 47, 0.856)
+    ),
+    url("../../img/HeaderCover.jpg");
+  background-size: cover;
+  background-position: center;
+}
