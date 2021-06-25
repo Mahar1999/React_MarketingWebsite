@@ -1,0 +1,118 @@
+@import "../../helper/mixin.scss";
+
+.portContainer {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  background-image: linear-gradient(to right bottom, #eeeeeecc, #ebebeb),
+    url("../../img/header5.jpg");
+  background-position: center;
+  background-size: cover;
+  color: #051a21;
+}
+
+.heading {
+  text-align: center;
+  margin: 4rem 0 0 0;
+
+  &__primary {
+    font-size: 5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+
+    @include respond(tab-land) {
+      font-size: 3.5rem;
+    }
+    @include respond(tab-phone-1) {
+      font-size: 3rem;
+    }
+  }
+
+  &__secondary {
+    font-size: 2rem;
+    word-spacing: 2px;
+
+    @include respond(tab-land) {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.contetnContainer {
+  display: flex;
+  height: 100%;
+
+  @include respond(tab-phone-1) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+// Left Container //
+.leftContainer {
+  width: 50%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include respond(tab-phone-1) {
+    order: 1;
+    width: 100%;
+  }
+}
+
+.listHeading {
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+
+  @include respond(tab-land) {
+    font-size: 1.5rem;
+  }
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 80%;
+  margin: 0 auto;
+
+  li {
+    font-size: 2rem;
+    list-style-type: disc;
+    line-height: 3.5rem;
+
+    @include respond(tab-land) {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+// Right Container //
+.rightContainer {
+  width: 50%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 100%;
+  }
+
+  @include respond(tab-phone-1) {
+    width: 100%;
+    img {
+      width: 50%;
+    }
+  }
+}

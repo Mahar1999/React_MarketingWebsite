@@ -1,0 +1,26 @@
+@import "../../helper/colors.scss";
+@import "../../helper/mixin.scss";
+
+.footerContainer {
+  height: 10vh;
+  color: $color-0;
+  background-color: $color-1;
+  font-size: 1.5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include respond(tab-land) {
+    font-size: 1.3rem;
+  }
+  @include respond(phone-1) {
+    height: 8vh;
+    font-size: 1rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: rgb(196, 176, 176);
+  }
+}

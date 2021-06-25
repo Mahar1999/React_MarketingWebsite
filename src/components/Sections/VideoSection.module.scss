@@ -1,0 +1,88 @@
+@import "../../helper/colors.scss";
+@import "../../helper/mixin.scss";
+
+.videoContainer {
+  height: 90vh;
+  width: 100%;
+  position: relative;
+
+  @include respond(tab-land) {
+    height: 80vh;
+  }
+  @include respond(tab-phone-1) {
+    height: 70vh;
+  }
+  @include respond(tab-phone-2) {
+    height: 60vh;
+  }
+  @include respond(phone-2) {
+    height: 50vh;
+  }
+}
+
+.bckvideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.gradient {
+  background-image: radial-gradient(
+    circle at 50% 50%,
+    #111222c5,
+    rgba(17, 38, 58, 0.637) 87%,
+    rgba(41, 27, 27, 0)
+  );
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.headingPrimary {
+  color: $color-0;
+  font-size: 7rem;
+  font-weight: 600;
+  text-transform: capitalize;
+
+  @include respond(tab-land) {
+    font-size: 5rem;
+  }
+  @include respond(tab-phone-2) {
+    font-size: 4rem;
+  }
+  @include respond(phone-2) {
+    font-size: 3rem;
+  }
+}
+
+.headingSecondary {
+  color: $color-0;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-top: 3rem;
+
+  @include respond(tab-land) {
+    font-size: 1.5rem;
+  }
+  @include respond(tab-phone-2) {
+    font-size: 1.3rem;
+  }
+  @include respond(phone-2) {
+    font-size: 1rem;
+  }
+}

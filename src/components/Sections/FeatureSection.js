@@ -1,7 +1,6 @@
 import React from "react";
 
 import Card from "../../UI/Card";
-import { IoBarbellOutline } from "react-icons/io5";
 
 import classes from "./FeatureSection.module.scss";
 
