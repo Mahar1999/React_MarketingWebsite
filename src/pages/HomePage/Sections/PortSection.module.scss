@@ -1,12 +1,16 @@
-@import "../../helper/mixin.scss";
+@import "../../../helper/colors.scss";
+@import "../../../helper/mixin.scss";
 
 .portContainer {
-  height: 100vh;
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 3rem 0;
 
-  background-image: linear-gradient(to right bottom, #eeeeeecc, #ebebeb),
-    url("../../img/header5.jpg");
+  background-image: linear-gradient(to right bottom, #ffffffd2, #d3d3d3e8),
+    url("../../../img/header5.jpg");
   background-position: center;
   background-size: cover;
   color: #051a21;
@@ -14,35 +18,56 @@
 
 .heading {
   text-align: center;
-  margin: 4rem 0 0 0;
 
   &__primary {
-    font-size: 5rem;
-    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 3.7rem;
     margin-bottom: 1rem;
+    letter-spacing: 0.8rem;
+    word-spacing: 1rem;
 
+    //Responsive Queries
     @include respond(tab-land) {
       font-size: 3.5rem;
     }
     @include respond(tab-phone-1) {
-      font-size: 3rem;
+      font-size: 2.5rem;
+    }
+    @include respond(phone-1) {
+      letter-spacing: 0.5rem;
+      word-spacing: 0.5rem;
+    }
+    @include respond(phone-3) {
+      font-size: 2rem;
+      letter-spacing: 0.3rem;
+      word-spacing: 0.5rem;
     }
   }
 
   &__secondary {
-    font-size: 2rem;
+    font-size: 1.8rem;
     word-spacing: 2px;
 
+    //Responsive Queries
     @include respond(tab-land) {
       font-size: 1.5rem;
+    }
+    @include respond(tab-phone-1) {
+      line-height: 2rem;
+    }
+    @include respond(phone-2) {
+      font-size: 1.2rem;
     }
   }
 }
 
 .contetnContainer {
   display: flex;
+  align-items: center;
+  justify-content: center;
   height: 100%;
 
+  //Responsive Queries
   @include respond(tab-phone-1) {
     display: flex;
     flex-direction: column;
@@ -59,6 +84,7 @@
   justify-content: center;
   align-items: center;
 
+  //Responsive Queries
   @include respond(tab-phone-1) {
     order: 1;
     width: 100%;
@@ -69,10 +95,14 @@
   font-size: 1.8rem;
   font-weight: 600;
   letter-spacing: 2px;
-  margin-bottom: 1rem;
+  margin: 1rem;
 
+  //Responsive Queries
   @include respond(tab-land) {
     font-size: 1.5rem;
+  }
+  @include respond(phone-4) {
+    font-size: 1.2rem;
   }
 }
 
@@ -86,12 +116,18 @@
   margin: 0 auto;
 
   li {
-    font-size: 2rem;
+    font-size: 1.8rem;
     list-style-type: disc;
     line-height: 3.5rem;
+    letter-spacing: 1px;
 
+    //Responsive Queries
     @include respond(tab-land) {
       font-size: 1.5rem;
+    }
+    @include respond(phone-2) {
+      font-size: 1.2rem;
+      line-height: 2.5rem;
     }
   }
 }
@@ -109,6 +145,7 @@
     width: 100%;
   }
 
+  //Responsive Queries
   @include respond(tab-phone-1) {
     width: 100%;
     img {

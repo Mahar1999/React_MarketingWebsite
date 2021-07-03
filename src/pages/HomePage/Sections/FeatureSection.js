@@ -1,30 +1,30 @@
 import React from "react";
-
-import Card from "../../UI/Card";
+  
+import Card from '../../../UI/Card'
 
 import classes from "./FeatureSection.module.scss";
 
 const FeatureSection = () => {
   const featureList = [
     {
-      title: "i10-Processor",
+      title: "alpha rogue phoneix",
       description:
-        "The power to do it all.Now play your favrouite games with no frame lag.Smooth gaming with the new Intel Core i10-10300H processor  up to 4.5 Ghz",
+        "The Alpha Rogue Phoenix for the true Gamers who need the finest of the finest experience with the smoothest and most powerful system",
     },
     {
-      title: "GEFORCE RTX™ ",
+      title: "alpha rogue frostfire",
       description:
-        "NVIDIA® GEFORCE RTX™ 30 SERIES deliver the ultimate performance for gamers and creators, utilizing NVIDIA® Max-Q  for peak performance and efficiency.",
+        "The Alpha Rogue FrostFire for professionals who aspire high performance and mighter specs than any other for their art",
     },
     {
-      title: "1TB SSD/32GB RAM",
+      title: "alpha rogue shadow",
       description:
-        "When you decide to load up a game or sit back to binge on your latest series, the high-speed display keeps everything fluid and seamless",
+        "The Alpha Rogue shadow for the new warriors who need to polish their work and talent. Best for your next College freshers",
     },
     {
-      title: "VORTEX FLOW",
+      title: "alpha rogue infinity",
       description:
-        "Through strategically placed thermal foam and controlled paths,optimize the airflow to increase overall cooling–reducing temperature and delivering superior performance.",
+        "The Alpha Rogue infinity for the students for their school projects and school meets. Powered up with the basics of all that you just need",
     },
   ];
   return (

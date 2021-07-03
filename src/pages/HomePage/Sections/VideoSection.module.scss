@@ -1,22 +1,25 @@
-@import "../../helper/colors.scss";
-@import "../../helper/mixin.scss";
+@import "../../../helper/colors.scss";
+@import "../../../helper/mixin.scss";
 
 .videoContainer {
   height: 90vh;
+  min-height: 50rem;
   width: 100%;
   position: relative;
 
+  //Responive Queries
   @include respond(tab-land) {
-    height: 80vh;
+    height: 75vh;
   }
   @include respond(tab-phone-1) {
     height: 70vh;
   }
   @include respond(tab-phone-2) {
-    height: 60vh;
+    height: 50vh;
   }
   @include respond(phone-2) {
-    height: 50vh;
+    height: 40vh;
+    min-height: 37rem;
   }
 }
 
@@ -31,15 +34,23 @@
 }
 
 .gradient {
+  // Dark blue
   background-image: radial-gradient(
     circle at 50% 50%,
-    #111222c5,
-    rgba(17, 38, 58, 0.637) 87%,
-    rgba(41, 27, 27, 0)
+    #35020242,
+    #28113aa2 87%,
+    #291b1b00
   );
+  
+  // Dark red
+  // background-image: radial-gradient(
+  //   circle at 50% 50%,
+  //   #35020242,
+  //   #28113aa2 87%,
+  //   #291b1b00
+  // );
+
   position: absolute;
-  top: 0;
-  left: 0;
   height: 100%;
   width: 100%;
   object-fit: cover;
@@ -57,7 +68,10 @@
   font-size: 7rem;
   font-weight: 600;
   text-transform: capitalize;
+  letter-spacing: 0.22rem;
+  word-spacing: 0.7rem;
 
+  //Responive Queries
   @include respond(tab-land) {
     font-size: 5rem;
   }
@@ -67,22 +81,34 @@
   @include respond(phone-2) {
     font-size: 3rem;
   }
+  @include respond(phone-3) {
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
+    word-spacing: 0.5rem;
+  }
 }
 
 .headingSecondary {
   color: $color-0;
   font-size: 2rem;
   text-transform: uppercase;
-  letter-spacing: 3px;
   margin-top: 3rem;
+  letter-spacing: 5px;
+  word-spacing: 7px;
 
+  //Responive Queries
   @include respond(tab-land) {
     font-size: 1.5rem;
   }
   @include respond(tab-phone-2) {
     font-size: 1.3rem;
   }
-  @include respond(phone-2) {
+  @include respond(phone-1) {
     font-size: 1rem;
+  }
+  @include respond(phone-2) {
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    word-spacing: 5px;
   }
 }

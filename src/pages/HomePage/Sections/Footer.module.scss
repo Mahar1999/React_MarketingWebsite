@@ -1,8 +1,9 @@
-@import "../../helper/colors.scss";
-@import "../../helper/mixin.scss";
+@import "../../../helper/colors.scss";
+@import "../../../helper/mixin.scss";
 
 .footerContainer {
   height: 10vh;
+  min-height: 6rem;
   color: $color-0;
   background-color: $color-1;
   font-size: 1.5rem;
@@ -10,7 +11,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
 
+  //Responsive Queries
   @include respond(tab-land) {
     font-size: 1.3rem;
   }

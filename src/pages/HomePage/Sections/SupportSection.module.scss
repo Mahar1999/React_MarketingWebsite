@@ -1,0 +1,125 @@
+@import "../../../helper/colors.scss";
+@import "../../../helper/mixin.scss";
+
+.contactContainer {
+  width: 100%;
+  height: 75vh;
+  min-height: 40rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e2e2e1;
+
+  // Responsive Queries
+  @include respond(tab-phone-1) {
+    height: 60vh;
+  }
+  @include respond(phone-1) {
+    height: 50vh;
+  }
+}
+
+.contactInfo {
+  width: 50%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: self-start;
+  justify-content: space-evenly;
+}
+
+.contactImage {
+  width: 50%;
+  height: 100%;
+  background-image: linear-gradient(to bottom right, #3d3d3d62, #2b26205d),
+    url("../../../img/Contact-1.png");
+  background-position: top;
+  background-size: cover;
+  clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+// Top Heading
+.contactHeadingPrimary {
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  word-spacing: 5px;
+  margin-left: 2rem;
+  color: #3b3b3b;
+
+  //Responsive Queries
+  @include respond(tab-land) {
+    font-size: 3rem;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+  }
+  @include respond(tab-phone-1) {
+    font-size: 2.5rem;
+  }
+  @include respond(phone-1) {
+    font-size: 2.2rem;
+  }
+}
+
+.contactHeadingTagline {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  margin-top: 1rem;
+  margin-left: 2rem;
+  color: #3b3b3b;
+  text-transform: capitalize;
+
+  //Responsive Queries
+  @include respond(tab-land) {
+    font-size: 1.5rem;
+  }
+  @include respond(tab-phone-1) {
+    font-size: 1.3rem;
+  }
+  @include respond(phone-1) {
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+  }
+}
+
+.ContactUserContainer {
+  margin: 1rem 0rem 0rem 2rem;
+  color: #3b3b3b;
+
+  li {
+    list-style: none;
+    text-decoration: none;
+    margin-bottom: 3rem;
+  }
+}
+
+// Contact Heading
+.heading {
+  &__primary {
+    font-size: 2rem;
+    font-weight: 500;
+
+    //Responsive Queries
+    @include respond(tab-phone-1) {
+      font-size: 1.7rem;
+    }
+    @include respond(phone-1) {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__secondary {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+
+    //Responsive Queries
+    @include respond(tab-phone-1) {
+      font-size: 1.3rem;
+      margin-top: 0.7rem;
+    }
+    @include respond(phone-1) {
+      font-size: 1.1rem;
+    }
+  }
+}

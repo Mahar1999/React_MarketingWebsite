@@ -16,6 +16,7 @@ const Card = (props) => {
             {props.description}
           </p>
         </div>
+        <button  className={classes.specBtn}>Full Specification</button>
       </div>
     </div>
   );

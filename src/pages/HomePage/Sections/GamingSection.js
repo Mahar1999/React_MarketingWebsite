@@ -1,6 +1,6 @@
 import React from "react";
 
-import Feature from "../../img/GamingMain.png";
+import Feature from "../../../img/GamingMain.png";
 
 import classes from "./GamingSection.module.scss";
 const FeatureSection1 = () => {

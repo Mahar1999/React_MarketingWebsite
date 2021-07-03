@@ -1,6 +1,6 @@
 import React from "react";
 
-import portImg from "../../img/port-1.png";
+import portImg from "../../../img/port-1.png";
 
 import classes from "./PortSection.module.scss";
 
@@ -8,17 +8,17 @@ const PortSection = () => {
   return (
     <div className={classes.portContainer}>
       <div className={classes.heading}>
-        <p className={classes.heading__primary}>Packed With Ports</p>
+        <h1 className={classes.heading__primary}>- Packed With Ports - </h1>
         <p className={classes.heading__secondary}>
           Have all the ports you need, including up to an USB 3.2 Gen 2 Type-C™
-          with Thunderbolt™ 3, and go beyond other mere gaming laptops.
+          with Thunderbolt™ 3, and go beyond other mere gaming laptops
         </p>
       </div>
 
       <div className={classes.contetnContainer}>
         <div className={classes.leftContainer}>
           <div className={classes.list}>
-            <p className={classes.listHeading}>-- PLAY UNPLUGGED, OR NOT --</p>
+            <p className={classes.listHeading}>- PLAY UNPLUGGED, OR NOT -</p>
             <ul>
               <li>
                 1 Thunderbolt™ 3 (40 Gbps signaling rate) with SuperSpeed USB
@@ -39,7 +39,7 @@ const PortSection = () => {
           </div>
         </div>
         <div className={classes.rightContainer}>
-          <img src={portImg} alt="portImg" className />
+          <img src={portImg} alt="portImg" />
         </div>
       </div>
     </div>

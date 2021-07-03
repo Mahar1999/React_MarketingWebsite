@@ -1,9 +1,9 @@
-@import "../../helper/colors.scss";
-@import "../../helper/mixin.scss";
+@import "../../../helper/colors.scss";
+@import "../../../helper/mixin.scss";
 
 .featureContainer {
   width: 100%;
-  padding: 3rem 0;
+  padding: 5rem 0;
   background-color: $color-whiteShade-1;
 
   display: flex;
@@ -12,10 +12,11 @@
   flex-direction: column;
 
   background-image: linear-gradient(to right bottom, #eeeeeecc, #ebebeb),
-    url("../../img/header5.jpg");
+    url("../../../img/header5.jpg");
   background-position: center;
   background-size: cover;
 
+  //Repsonsive Queries
   @include respond(phone-2) {
     padding: 2rem;
   }
@@ -24,7 +25,7 @@
 .cardList {
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
 }
@@ -36,7 +37,7 @@
   letter-spacing: 0.8rem;
   word-spacing: 1rem;
 
-
+  //Repsonsive Queries
   @include respond(tab-phone-2) {
     font-size: 3.5rem;
     letter-spacing: 0.5rem;
