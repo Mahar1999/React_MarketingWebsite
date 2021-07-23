@@ -1,10 +1,10 @@
 import React from "react";
-  
-import Card from '../../../UI/Card'
+
+import Card from "../../../UI/Card";
 
 import classes from "./FeatureSection.module.scss";
 
-const FeatureSection = () => {
+const FeatureSection = (props) => {
   const featureList = [
     {
       title: "alpha rogue phoneix",
@@ -28,7 +28,7 @@ const FeatureSection = () => {
     },
   ];
   return (
-    <div className={classes.featureContainer}>
+    <div className={classes.featureContainer} ref={props.featureSectionRef}>
       <h1 className={classes.featureHeading}>- the power to do it all -</h1>
 
       <div className={classes.cardList}>

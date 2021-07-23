@@ -1,27 +1,57 @@
 import React from "react";
 
-import logo from "../../img/logo2.jpg";
-// import FeatureSection from "../Sections/GamingSection";
+import Logo from "../Logo/Logo";
 
 import classes from "./Navigation.module.scss";
 
-const Navigation = () => {
-  const smoothScrollFeatureSection = () => {};
+const Navigation = (props) => {
+  const scrollToSignUp = (e) => {
+    let signUpCoords = props.btnSignUpRef.current;
+
+    // console.log(signUpCoords.getBoundingClientRect());
+    // console.log(e.target.getBoundingClientRect());
+
+    window.scrollTo({
+      left: signUpCoords.getBoundingClientRect().left + window.pageXOffset,
+      top: signUpCoords.getBoundingClientRect().top + window.pageYOffset,
+      behavior: "smooth",
+    });
+  };
+
+  const scrollToFeatureSection = (e) => {
+    let featureCoords = props.featureSectionRef.current;
+    console.log(featureCoords);
+
+    window.scrollTo({
+      left: featureCoords.getBoundingClientRect().left + window.pageXOffset,
+      top: featureCoords.getBoundingClientRect().top + window.pageYOffset,
+      behavior: "smooth",
+    });
+  };
+
+  const scroolToSupportSection = (e) => {
+    let supportCoords = props.supportSectionRef.current;
+
+    window.scrollTo({
+      left: supportCoords.getBoundingClientRect().left + window.pageXOffset,
+      top: supportCoords.getBoundingClientRect().top + window.pageYOffset,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div className={classes.navigation}>
       <nav>
         <ul>
-          <li onClick={smoothScrollFeatureSection}>New Arrival</li>
-          <li>Support</li>
+          <li onClick={scrollToFeatureSection}> New Arrival</li>
+          <li onClick={scroolToSupportSection}>Support</li>
         </ul>
       </nav>
-      <div className={classes.logo}>
-        <img src={logo} alt="logoPhoto" />
-      </div>
+      <Logo />
       <nav>
         <ul>
           <li>Contact Us</li>
-          <li>Sign Up</li>
+          <li onClick={scrollToSignUp}>Sign Up</li>
         </ul>
       </nav>
     </div>

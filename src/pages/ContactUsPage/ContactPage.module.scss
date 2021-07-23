@@ -1,0 +1,98 @@
+@import "../../helper/colors.scss";
+@import "../../helper/mixin.scss";
+
+.contactConatiner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  height: 100vh;
+  min-height: 40rem;
+}
+.formContainer {
+  width: 50%;
+  height: 50vh;
+  min-height: 40rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  border-radius: 10px;
+  padding: 1rem 0;
+
+  background-color: $color-1;
+  color: $color-0;
+  text-align: center;
+  margin: 1rem auto;
+
+  box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.64);
+  -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.64);
+  -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.64);
+
+  // Responsive Queries
+  @include respond(tab-port) {
+    width: 60%;
+  }
+  @include respond(tab-phone-1) {
+    width: 70%;
+  }
+  @include respond(tab-phone-2) {
+    width: 80%;
+  }
+  @include respond(phone-1) {
+    width: 90%;
+  }
+}
+
+.labelContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  input {
+    width: 60%;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+  }
+
+  textarea {
+    width: 60%;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+  }
+  label {
+    width: 20%;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+
+    // Responsive Queries
+    @include respond(phone-2) {
+      width: 30%;
+    }
+  }
+}
+
+.formBtn {
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 3px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 1.5rem;
+  border-radius: 10px;
+  border: $color-0 1px double;
+  background-color: $color-1;
+  color: $color-0;
+}
+.formBtn:hover {
+  background-color: $color-0;
+  color: $color-1;
+}

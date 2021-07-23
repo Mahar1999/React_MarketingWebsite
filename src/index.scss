@@ -18,3 +18,12 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
 }
+
+.carousel .slide img {
+  width: 50% !important;
+  margin-bottom: 3rem;
+}
+
+.carousel .thumbs-wrapper {
+  text-align: center;
+}

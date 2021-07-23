@@ -2,9 +2,9 @@ import React from "react";
 
 import classes from "./SupportSection.module.scss";
 
-const ContactSection = () => {
+const ContactSection = (props) => {
   return (
-    <div className={classes.contactContainer}>
+    <div className={classes.contactContainer} ref={props.supportSectionRef}>
       <div className={classes.contactInfo}>
         <div className={classes.contactHeadingContainer}>
           <p className={classes.contactHeadingPrimary}>Contact Support ! </p>

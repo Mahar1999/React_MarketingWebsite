@@ -1,13 +1,17 @@
 import React from "react";
 
 import HomePage from "./pages/HomePage/HomePage";
+import FeaturePhoneix from "./pages/FeaturePage/FeatureShadow";
+import ContactPage from "./pages/ContactUsPage/ContactPage";
 
-import "./App.scss";
+import "./App.module.scss";
 
 function App() {
   return (
     <div>
-      <HomePage />
+      {/* <HomePage /> */}
+      <FeaturePhoneix />
+      {/* <ContactPage /> */}
     </div>
   );
 }

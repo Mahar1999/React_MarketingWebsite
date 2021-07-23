@@ -1,0 +1,71 @@
+@import "../../helper/colors.scss";
+@import "../../helper/mixin.scss";
+
+.featureNavigationContainer {
+  height: 14vh;
+  min-height: 10rem;
+  background-color: $color-1;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.title {
+  color: $color-0;
+  font-size: 3rem;
+  font-weight: 600;
+
+  //Responsive Queries
+  @include respond(tab-land-port) {
+    font-size: 2.5rem;
+  }
+  @include respond(tab-phone-1) {
+    font-size: 2.2rem;
+  }
+  @include respond(phone-1) {
+    font-size: 2rem;
+  }
+  @include respond(phone-2) {
+    font-size: 1.5rem;
+  }
+}
+
+.navigationLinks {
+  color: $color-0;
+
+  ul {
+    display: flex;
+  }
+  li {
+    list-style: none;
+    font-size: 1.5rem;
+    margin: 0 3rem;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s;
+    cursor: pointer;
+
+    //Responsive Queries
+    @include respond(tab-land-port) {
+      font-size: 1.3rem;
+    }
+    @include respond(tab-phone-1) {
+      font-size: 1.2rem;
+      margin: 0 1rem;
+    }
+    @include respond(phone-1) {
+      font-size: 1rem;
+    }
+    @include respond(phone-2) {
+      font-size: 1.2rem;
+      margin: 0 0.5rem;
+    }
+  }
+
+  li:hover {
+    background-color: $color-0;
+    color: $color-1;
+    padding: 0.5rem 1rem;
+    border-radius: 7px;
+  }
+}
