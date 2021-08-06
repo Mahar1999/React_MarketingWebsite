@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import classes from "./FeatureNavigation.module.scss";
 
@@ -12,8 +13,12 @@ const FeatureNavigation = (props) => {
       <div className={classes.title}>{props.title}</div>
       <div className={classes.navigationLinks}>
         <ul>
-          <li>Home</li>
-          <li>Contact Us</li>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/contactUs">Contact Us</Link>
+          </li>
         </ul>
       </div>
     </div>

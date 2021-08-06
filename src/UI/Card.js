@@ -1,5 +1,6 @@
 import React from "react";
 import { IoBarbellOutline } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 import classes from "./Card.module.scss";
 
@@ -16,7 +17,9 @@ const Card = (props) => {
             {props.description}
           </p>
         </div>
-        <button  className={classes.specBtn}>Full Specification</button>
+        <Link className={classes.specBtn} to={`/${props.pathTo}`}>
+          Full Specification
+        </Link>
       </div>
     </div>
   );

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import Logo from "../Logo/Logo";
 
@@ -50,7 +51,11 @@ const Navigation = (props) => {
       <Logo />
       <nav>
         <ul>
-          <li>Contact Us</li>
+          <li>
+            <Link to="/contactUs" className={classes.LinkContactUs}>
+              Contact Us
+            </Link>
+          </li>
           <li onClick={scrollToSignUp}>Sign Up</li>
         </ul>
       </nav>

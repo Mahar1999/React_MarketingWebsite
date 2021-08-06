@@ -1,0 +1,30 @@
+@import "../helper/colors.scss";
+@import "../helper/mixin.scss";
+
+.popupContainer {
+  height: 100vh;
+  width: 100vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signupContainer {
+  height: 50vh;
+  width: 50vw;
+  z-index: 100;
+
+  background-color: $color-0;
+  border-radius: 10px;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.75);
+}

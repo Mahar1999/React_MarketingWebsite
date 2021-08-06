@@ -6,7 +6,6 @@ import classes from "./Header.module.scss";
 const Header = (props) => {
   const scrollToFeatureSection = (e) => {
     let featureCoords = props.featureSectionRef.current;
-    console.log(featureCoords);
 
     window.scrollTo({
       left: featureCoords.getBoundingClientRect().left + window.pageXOffset,

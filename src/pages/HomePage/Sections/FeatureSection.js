@@ -35,18 +35,22 @@ const FeatureSection = (props) => {
         <Card
           title={featureList[0].title}
           description={featureList[0].description}
+          pathTo="FeaturePhoneix"
         />
         <Card
           title={featureList[1].title}
           description={featureList[1].description}
+          pathTo="FeatureFrostfire"
         />
         <Card
           title={featureList[2].title}
           description={featureList[2].description}
+          pathTo="FeatureShadow"
         />
         <Card
           title={featureList[3].title}
           description={featureList[3].description}
+          pathTo="FeatureInfinity"
         />
       </div>
     </div>
