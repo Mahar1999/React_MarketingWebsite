@@ -1,6 +1,6 @@
 import React from "react";
 
-import bckVideoMp4 from "../../../img/Video-4.mp4";
+import bckVideoMp4 from "../../../img/Video-4_1.mp4";
 
 import classes from "./VideoSection.module.scss";
 

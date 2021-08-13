@@ -35,9 +35,9 @@ const FeaturePhoneix = () => {
     RamType: "DDR4",
     HDDcapacity: "1 TB",
     ProcessorVariant: "10500H",
-    ClockSpeed: "2.5 GHz with Turbo Boost upto 4.5 GHz",
+    ClockSpeed: "2.5GHz with TurboBoost upto 4.5GHz",
     Cache: "12",
-    GraphicProcessor: " NVIDIA GeForce GTX 1650 Max Q",
+    GraphicProcessor: "NVIDIA GeForce GTX 1650 Max Q",
     NumberOfCores: 6,
   };
 

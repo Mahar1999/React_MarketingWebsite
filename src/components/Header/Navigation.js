@@ -51,8 +51,8 @@ const Navigation = (props) => {
       <Logo />
       <nav>
         <ul>
-          <li>
-            <Link to="/contactUs" className={classes.LinkContactUs}>
+          <li className={classes.LinkContactUs}>
+            <Link to="/contactUs" >
               Contact Us
             </Link>
           </li>
