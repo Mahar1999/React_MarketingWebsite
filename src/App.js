@@ -9,8 +9,6 @@ import FeatureFrostfire from "./pages/FeaturePage/FeatureFrostfire";
 import FeatureInfinity from "./pages/FeaturePage/FeatureInfinity";
 import FeatureShadow from "./pages/FeaturePage/FeatureShadow";
 
-import PopupSignup from "./UI/PopupSignup";
-
 import "./App.module.scss";
 
 function App() {
@@ -36,7 +34,6 @@ function App() {
       <Route path="/" exact>
         <HomePage />
       </Route>
-      {/* <PopupSignup /> */}
     </div>
   );
 }
